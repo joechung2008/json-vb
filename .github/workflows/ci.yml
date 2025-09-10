@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        dotnet-version: [8.0]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use .NET ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+
+      - name: Restore dependencies
+        run: dotnet restore json-vb.sln
+
+      - name: Build
+        run: dotnet build json-vb.sln --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test JsonParser.Tests/JsonParser.Tests.vbproj --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage"
+
+      - name: Upload coverage reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report-net-${{ matrix.dotnet-version }}
+          path: ./JsonParser.Tests/TestResults/*/coverage.cobertura.xml
+          if-no-files-found: ignore

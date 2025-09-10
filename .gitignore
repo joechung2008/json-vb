@@ -1,0 +1,54 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+packages/
+*.nupkg
+*.snupkg
+*.log
+*.tmp
+*.cache
+*.pdb
+*.exe
+*.dll
+*.dll.config
+*.vshost.exe
+*.vshost.exe.config
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# NuGet packages
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test results
+TestResults/
+*.trx
+
+# Coverage
+*.coverage
+*.coveragexml
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.temp
