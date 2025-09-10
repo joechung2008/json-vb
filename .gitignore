@@ -32,6 +32,8 @@ artifacts/
 .idea/
 *.swp
 *.swo
+.vscode/
+!.vscode/extensions.json
 
 # OS
 .DS_Store
