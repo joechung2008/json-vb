@@ -15,11 +15,9 @@ Module Program
 
     Sub Main(args As String())
         Dim builder = WebApplication.CreateBuilder(args)
-        builder.WebHost.UseUrls("http://localhost:8000", "https://localhost:8001")
+
         Dim app = builder.Build()
-
         app.MapPost("/api/v1/parse", AddressOf HandleParseAsync)
-
         app.Run()
     End Sub
 
