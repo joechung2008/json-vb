@@ -140,12 +140,12 @@ Parses JSON input and returns the parsed result.
 
 ## Testing with REST Client Extension
 
-The API includes test data files in the `API/testdata/` directory that can be used with VS Code's REST Client extension for easy testing.
+The API includes test data files in the `testdata/` directory that can be used with VS Code's REST Client extension for easy testing.
 
 ### Setup
 
 1. Install the [REST Client extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for VS Code
-2. Open any `.rest` file from the `API/testdata/` directory
+2. Open any `.rest` file from the `testdata/` directory
 
 ### Using Test Files
 
