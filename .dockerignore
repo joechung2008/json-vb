@@ -1,0 +1,38 @@
+# Build artifacts
+**/bin/
+**/obj/
+
+# User-specific files
+**/*.user
+**/*.suo
+
+# IDE files
+.vscode/
+.vs/
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+README.md
+LICENSE
+
+# Docker files (if not needed in context)
+Dockerfile*
+.dockerignore
+
+# Test data (exclude if not required in the image)
+**/testdata/
+
+# Temporary files
+*.tmp
+*.log
+
+# NuGet packages
+packages/
+**/*.nupkg
+
+# OS generated files
+.DS_Store
+Thumbs.db
